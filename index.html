@@ -1,93 +1,145 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Red Neuronal Alquiler SJL 2023</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+    <link rel="icon" href="logo.ico" type="image/x-icon">
 
+    <style>
+        body {
+            background-color: #212529;
+            color: #ffffff;
+        }
+
+        .card {
+            background-color: #343a40;
+            color: #ffffff;
+        }
+
+        label {
+            color: #ffffff;
+        }
+
+        .form-control {
+            background-color: #343a40;
+            color: #ffffff;
+            border-color: #8d3adb;
+        }
+
+        .form-control:focus {
+            background-color: #343a40;
+            color: #ffffff;
+            border-color: #007bff;
+            box-shadow: 0 0 0 0.2rem rgba(103, 160, 221, 0.5);
+        }
+
+        .btn-primary {
+            background-color: #007bff;
+            border-color: #007bff;
+        }
+
+        .btn-primary:hover {
+            background-color: #0069d9;
+            border-color: #0062cc;
+        }
+
+        .btn-primary:focus,
+        .btn-primary.focus {
+            box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.5);
+        }
+    </style>
 </head>
 
 <body>
 
     <div class="container">
         <div class="row">
-            <div class="col-12 col-md-6 offset-md-3">
-                <div class="card mt-5 shadow">
-                    <div class="card-body">
-                        <h4 class="text-center">Red Neuronal para calcular el precio del Alquiler en San Juan de
-                            Lurigancho</h4>
-                    </div>
-                </div>
-
-                <div class="card mt-2 shadow">
-                    <div class="card-body">
-
-                        <label>M^2</label>
-                        <input type="number" class="form-control mb-3" id="m2">
-
-                        <label>Baños</label>
-                        <input type="number" class="form-control mb-3" id="banios">
-
-
-                        <label>Nº de habitaciones</label>
-                        <input type="number" class="form-control mb-3" id="hab">
-
-                        <label>Nº de piso en el que esta ubicado</label>
-                        <input type="number" class="form-control mb-3" id="planta">
-
-                        <label>Ascensor</label>
-                        <select id="ascensor" class="form-control mb-3">
-                            <option disabled selected>Elige una opción...</option>
-                            <option value=0>No</option>
-                            <option value=1>Si</option>
-                        </select>
-
-                        <label>Tiene vista al Exterior</label>
-                        <select id="ext" class="form-control mb-3">
-                            <option disabled selected>Elige una opción...</option>
-                            <option value=0>No</option>
-                            <option value=1>Si</option>
-                        </select>
-
-                        <label>Estado</label>
-                        <select id="est" class="form-control mb-3">
-                            <option disabled selected>Elige una opción...</option>
-                            <option value=0>no restaurado</option>
-                            <option value=1>restaurado</option>
-                            <option value=2>Nuevo o de estreno</option>
-                        </select>
-
-                        <label>Cercanía al tren electrico</label>
-                        <select id="cent" class="form-control mb-3">
-                            <option disabled selected>Elige una opción...</option>
-                            <option value=0>No</option>
-                            <option value=1>Si</option>
-                        </select>
-
-                        <div class="d-flex">
-                            <button class="btn btn-primary" type="button" id="btn">Calcular precio</button>
-                            <h5 id="resultado" class="mx-5 mt-2"></h5>
+            <div class="col-lg-4 col-xl-5"
+                style="margin: 0;padding: 0;width: 456px;margin-right: 6px;margin-top: 35px;height: 624px;margin-left: 19px;">
+                <div class="card">
+                    <div class="card-body" style="padding: 0px;">
+                        <div class="card">
+                            <div class="card-header">
+                                <h1 class="text-center">Red Neuronal para calcular el precio del Alquiler en SJL 2023
+                                </h1>
+                            </div>
+                            <div class="card-body">
+                                <p class="card-text"><b class="text-center">
+                                        <h5>"Los precios de agua, luz y otros servicios
+                                            están sujetos a la inflación y se consideran costos adicionales. Si el
+                                            arrendatario requiere un servicio adicional, debe presentar una solicitud al
+                                            arrendador. Por ejemplo, si desea tener acceso a internet, el arrendatario
+                                            no
+                                            puede contratar el servicio por sí mismo, ya que se requiere un recibo de
+                                            luz,
+                                            agua o gas. Por lo tanto, es necesario presentar una solicitud por escrito o
+                                            verbalmente al arrendador. Además, el contrato de arrendamiento tendrá una
+                                            duración de 6 meses con la opción de renovación por otros 6 meses, siempre y
+                                            cuando el arrendatario haya mantenido un buen comportamiento de pago. En
+                                            caso
+                                            contrario, el arrendatario deberá abandonar la propiedad debido a un
+                                            comportamiento de pago insatisfactorio."</h5>
+                                    </b></p>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
+            <div class="col" style="margin: 65px;padding: 5px;margin-top: 25px;">
+                <label class="form-label">Metros cuadrados (m<sup>2</sup>)</label>
+                <input type="number" class="form-control mb-3" id="m2">
+                <label class="form-label">Baños</label>
+                <input type="number" class="form-control mb-3" id="banios">
+                <label class="form-label">Nº de habitaciones</label>
+                <input type="number" class="form-control mb-3" id="hab">
+                <label class="form-label">Nº de piso en el que está ubicado</label>
+                <input type="number" class="form-control mb-3" id="planta">
+                <label class="form-label">Ascensor</label>
+                <select id="ascensor" class="form-control mb-3">
+                    <option value="" selected="">Elige una opción...</option>
+                    <option value="0">No</option>
+                    <option value="1">Sí</option>
+                </select>
+                <label class="form-label">Tiene vista al Exterior</label>
+                <select id="ext" class="form-control mb-3">
+                    <option value="" selected="">Elige una opción...</option>
+                    <option value="0">No</option>
+                    <option value="1">Sí</option>
+                </select>
+                <label class="form-label">Estado</label>
+                <select id="est" class="form-control mb-3">
+                    <option value="" selected="">Elige una opción...</option>
+                    <option value="0">no restaurado</option>
+                    <option value="1">restaurado</option>
+                    <option value="2">Nuevo o de estreno</option>
+                </select>
+                <label class="form-label">Cercanía al tren eléctrico</label>
+                <select id="cent" class="form-control mb-3">
+                    <option value="" selected="">Elige una opción...</option>
+                    <option value="0">No</option>
+                    <option value="1">Sí</option>
+                </select>
+                <div class="d-flex">
+                    <button class="btn btn-primary" type="button" id="btn">Calcular precio</button>
+                    <h5 id="resultado" class="mx-5 mt-2"></h5>
+                </div>
+            </div>
         </div>
     </div>
-
     <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@2.0.0/dist/tf.min.js"></script>
 
     <script>
-
         var modelo = null;
-        //Cargamos el modelo entrenado
+        // Cargamos el modelo entrenado
         (async () => {
             console.log("Cargando el modelo...");
             modelo = await tf.loadLayersModel("model.json");
-            console.log("Modelo cargado!");
+            console.log("¡Modelo cargado!");
         })();
 
         const btn = document.getElementById("btn");
@@ -111,9 +163,7 @@
                 document.getElementById("resultado").innerHTML = "Intenta de nuevo en un rato...";
             }
         }
-
     </script>
-
 </body>
 
 </html>
